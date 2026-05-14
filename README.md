@@ -40,7 +40,11 @@ A full-stack web application built with **Node.js**, **Express**, and **MySQL** 
 ```
 ## ⚙️ Setup and Installation
  **1. Prerequisites**
- Node.js (v14+ recommended)MySQL Server2. Database SchemaRun the following SQL commands in your MySQL terminal to initialize the login database:SQLCREATE DATABASE login;
+ * **Node.js** (v14+ recommended)
+ * **MySQL Server**
+ **2. Database Schema**
+ Run the following SQL commands in your MySQL terminal to initialize the login database:SQLCREATE ```
+DATABASE login;
 USE login;
 
 CREATE TABLE register (
@@ -60,13 +64,33 @@ CREATE TABLE bookings (
     exam_date VARCHAR(100),
     FOREIGN KEY (user_id) REFERENCES register(id)
 );
-3. InstallationBash# Clone the repository and install dependencies
+```
+**3. Installation**
+```Bash
+# Clone the repository and install dependencies
 npm install express mysql2 ejs body-parser bcryptjs express-session
-4. ConfigurationUpdate the db connection in app.js with your MySQL credentials:JavaScriptconst db = mysql.createConnection({
+```
+**4. Configuration**
+   Update the db connection in app.js with your MySQL credentials:
+   ``JavaScriptconst 
+   db = 
+   mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "YOUR_PASSWORD", // Change this
     database: "login"
 });
-5. Start ServerBashnode app.js
-The application will be available at http://127.0.0.1:80/.🛤️ API RoutesMethodRouteDescriptionGET/Homepage with Booking FormGET/loginUser Login PageGET/registerUser Registration PagePOST/registerHandles Bcrypt hashing & DB insertionPOST/detailSubmits new test bookingGET/detailDisplays user-specific booking historyGET/logoutDestroys session and redirects to login🛠️ Tech StackRuntime: Node.jsFramework: Express.jsDatabase: MySQL (mysql2)View Engine: EJSSecurity: Bcryptjs
+``
+**6. Start Server**
+```Bash
+node app.js
+```
+The application will be available at http://127.0.0.1:80/.
+## 🛤️ API Routes
+MethodRouteDescriptionGET/Homepage with Booking FormGET/loginUser Login PageGET/registerUser Registration PagePOST/registerHandles Bcrypt hashing & DB insertionPOST/detailSubmits new test bookingGET/detailDisplays user-specific booking historyGET/logoutDestroys session and redirects to login
+# 🛠️ Tech Stack
+* **Runtime:** Node.js
+* **Framework:** Express.js
+* **Database:** MySQL (mysql2)
+* **View Engine:** EJS
+* **Security:** Bcryptjs
