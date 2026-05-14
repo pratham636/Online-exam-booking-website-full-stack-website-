@@ -43,7 +43,8 @@ A full-stack web application built with **Node.js**, **Express**, and **MySQL** 
  * **Node.js** (v14+ recommended)
  * **MySQL Server**
  **2. Database Schema**
- Run the following SQL commands in your MySQL terminal to initialize the login database:SQLCREATE ```
+ Run the following SQL commands in your MySQL terminal to initialize the login database:SQLCREATE
+```
 DATABASE login;
 USE login;
 
