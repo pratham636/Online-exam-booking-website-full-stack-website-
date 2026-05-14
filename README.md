@@ -72,7 +72,8 @@ CREATE TABLE bookings (
 npm install express mysql2 ejs body-parser bcryptjs express-session
 ```
 **4. Configuration**
-   Update the db connection in app.js with your MySQL credentials:
+   
+Update the db connection in app.js with your MySQL credentials:
    ```JavaScriptconst 
    db = 
    mysql.createConnection({
